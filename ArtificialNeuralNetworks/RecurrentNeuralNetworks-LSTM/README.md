@@ -6,4 +6,8 @@ Dataset obtained from: https://www.bvl.com.pe/inf_cotizaciones53100_U0lERVJDMQ.h
 
 Execution:
 
+-Activate your environment. In my case it's called 'tensorflow'
+> source activate tensorflow
 > python main.py
+or  
+> python3 main.py
