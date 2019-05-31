@@ -4,10 +4,12 @@ This example uses Keras and Tensorflow to implemement a LSTM network to predict 
 
 Dataset obtained from: https://www.bvl.com.pe/inf_cotizaciones53100_U0lERVJDMQ.html
 
-Execution:
+## Usage
+*Activate your environment. In my case it's called 'tensorflow'
 
--Activate your environment. In my case it's called 'tensorflow'
+```bash
 > source activate tensorflow
 > python main.py
-or  
+  or  
 > python3 main.py
+```
