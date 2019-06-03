@@ -9,8 +9,8 @@ from util import Util
 #-----------
 # PARAMETROS
 #-----------
-TRAIN_DATASET_FILE = 'dataset/BVL-SIDERC1/Sider-Peru_Stock-SIDERC1_Train.csv'
-TEST_DATASET_FILE = 'dataset/BVL-SIDERC1/Sider-Peru_Stock-SIDERC1_Test.csv'
+TRAIN_DATASET_FILE = '../dataset/BVL-SIDERC1/Sider-Peru_Stock-SIDERC1_Train.csv'
+TEST_DATASET_FILE = '../dataset/BVL-SIDERC1/Sider-Peru_Stock-SIDERC1_Test.csv'
 SERIE_NAME_VALUE = 'Apertura'
 SERIE_NAME_LABEL = 'EMPRESA SIDERURGICA DEL PERU S.A.A.'
 
