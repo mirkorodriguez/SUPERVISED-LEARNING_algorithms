@@ -66,7 +66,7 @@ def saveFile(object_to_save, scaler_filename):
     joblib.dump(object_to_save, scaler_filename)
 
 def loadFile(scaler_filename):
-    joblib.load(scaler_filename)
+    return joblib.load(scaler_filename)
 
 def plotHistogram(dataset_final):
     dataset_final.hist(figsize=(20,14), edgecolor="black", bins=20)

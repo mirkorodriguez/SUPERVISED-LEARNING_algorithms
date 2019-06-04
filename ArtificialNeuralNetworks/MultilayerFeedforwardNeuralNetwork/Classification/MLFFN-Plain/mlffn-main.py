@@ -6,7 +6,7 @@
 # Importando librerías
 import pandas as pd
 import numpy as np
-from util import plot_confusion_matrix, saveFile, plotHistogram, plotCorrelations
+from util import plot_confusion_matrix, saveFile, plotHistogram, plotCorrelations, loadFile
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
@@ -44,7 +44,7 @@ dataset_values[:,0:10] = stdScaler.fit_transform(dataset_values[:,0:10])
 # print("No Observations: ", stdScaler.n_samples_seen_)
 # print("Mean: ", stdScaler.mean_)
 # print("Varianza: ", stdScaler.var_)
-print ("\nDataset Normalizado\n: ", dataset_values)
+# print ("\nDataset Normalizado\n: ", dataset_values)
 
 # Guardando StandardScaler a disco
 saveFile(stdScaler,"./model/stdScaler.save")
@@ -114,11 +114,11 @@ neural_network.fit(X_train, y_train, batch_size = 32, epochs = 100)
 # PARTE III - Predicciones y evaluando el modelo
 #-----------------------------------------------
 
-#standarScaler = joblib.load("./model/stdScaler.save")
-#print("StandardScaler: ",standarScaler)
-#print("No Observations: ", standarScaler.n_samples_seen_)
-#print("Mean: ", standarScaler.mean_)
-#print("Varianza: ", standarScaler.var_)
+# standarScaler = loadFile("./model/stdScaler.save")
+# print("StandardScaler: ",standarScaler)
+# print("No Observations: ", standarScaler.n_samples_seen_)
+# print("Mean: ", standarScaler.mean_)
+# print("Varianza: ", standarScaler.var_)
 
 # Haciendo predicción de los resultados del Test
 y_pred = neural_network.predict(X_test)
@@ -129,7 +129,7 @@ y_test = y_test.astype(int)
 
 # 50 primeros resultados a comparar
 print("\nPredicciones (50 primeros):")
-print("\n\tReal", "\t", "Predicción(N)","\t", "Predicción (O)")
+print("\n\tReal", "\t", "Predicción(N)","\t", "Predicción(O)")
 for i in range(50):
     print(i, '\t', y_test[i], '\t ', y_pred_norm[i], '\t \t', y_pred[i])
 
