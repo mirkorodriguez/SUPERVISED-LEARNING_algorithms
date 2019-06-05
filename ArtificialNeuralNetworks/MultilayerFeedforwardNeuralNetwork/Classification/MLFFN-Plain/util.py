@@ -37,6 +37,7 @@ def plot_confusion_matrix(y_true, y_pred,
     fig, ax = plt.subplots()
     im = ax.imshow(cm, interpolation='nearest', cmap=plt.cm.Blues)
     ax.figure.colorbar(im, ax=ax)
+    ax.grid(linewidth=.0)
     # We want to show all ticks...
     ax.set(xticks=np.arange(cm.shape[1]),
            yticks=np.arange(cm.shape[0]),
@@ -47,8 +48,7 @@ def plot_confusion_matrix(y_true, y_pred,
            xlabel='Predicted label')
 
     # Rotate the tick labels and set their alignment.
-    plt.setp(ax.get_xticklabels(), rotation=45, ha="right",
-             rotation_mode="anchor")
+    plt.setp(ax.get_xticklabels(), rotation=45, ha="right",rotation_mode="anchor")
 
     # Loop over data dimensions and create text annotations.
     fmt = '.2f' if normalize else 'd'
@@ -74,5 +74,8 @@ def plotHistogram(dataset_final):
 
 def plotCorrelations(dataset_final):
     fig, ax = plt.subplots(figsize=(15,12))   # size in inches
-    sns.heatmap(dataset_final.corr(), annot=True, ax=ax)
+    g = sns.heatmap(dataset_final.corr(), annot=True, cmap="YlGnBu", ax=ax)
+    g.set_yticklabels(g.get_yticklabels(), rotation = 0)
+    g.set_xticklabels(g.get_xticklabels(), rotation = 45)
+    fig.tight_layout()
     plt.show()
