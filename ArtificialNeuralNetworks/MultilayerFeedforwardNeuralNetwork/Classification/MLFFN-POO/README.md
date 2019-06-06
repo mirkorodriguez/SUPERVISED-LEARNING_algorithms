@@ -10,7 +10,7 @@ Ensure GraphViz (https://www.graphviz.org/) is properly installed in your system
 > sudo yum install graphviz
 ```
 
-*Activate your environment. In my case it's called 'tensorflow' and install libraries if needed.
+*Install libraries and activate your environment if needed (my env is called 'tensorflow').
 
 ```bash
 > source activate tensorflow
