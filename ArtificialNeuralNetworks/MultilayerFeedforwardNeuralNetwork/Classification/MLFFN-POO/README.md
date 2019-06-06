@@ -3,8 +3,6 @@
 This example uses Keras and Tensorflow to implemement a classification ANN for client churn in a bank.
 The implementation uses OOP principles.
 
-Dataset obtained from: https://www.bvl.com.pe/inf_cotizaciones53100_U0lERVJDMQ.html
-
 ## Usage
 Ensure GraphViz (https://www.graphviz.org/) is properly installed in your system.
 
