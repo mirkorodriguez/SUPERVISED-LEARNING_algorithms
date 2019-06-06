@@ -3,6 +3,8 @@ from keras.models import Sequential
 from keras.models import load_model
 from keras.layers import Dense
 from keras.layers import Dropout
+from keras.utils import plot_model
+
 from keras.initializers import RandomUniform
 
 import datetime
@@ -92,3 +94,7 @@ class Model(object):
         from sklearn.metrics import confusion_matrix
         cm = confusion_matrix(y_test, y_pred_norm)
         return cm, y_pred_norm
+
+    def graphModel(self, to_file_name):
+        # Obtener el modelo en un file gra'fico
+        plot_model(self.neural_network, show_shapes = True, to_file = to_file_name)

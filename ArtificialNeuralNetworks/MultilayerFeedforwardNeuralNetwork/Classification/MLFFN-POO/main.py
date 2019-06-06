@@ -40,7 +40,7 @@ model = Model()
 model.trainNetwork(X_train, y_train, EPOCHS, BATCH_SIZE)
 # Summarize model.
 model.neural_network.summary()
-
+model.graphModel("./model/model_graph.png")
 # Guardar la RNA en disco
 model_file_name = model.saveModel(NAME_MODEL_TO_SAVE)
 print("Modelo guardado en disco >> ", model_file_name)
