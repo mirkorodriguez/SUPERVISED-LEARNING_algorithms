@@ -123,7 +123,7 @@ print('Test accuracy:', score[1])
 # Ejercicio: Predecir una imagen creada por el usuario
 # ----------------------------------------------------
 from keras.preprocessing import image
-test_image_path = './sample/numberTest2.jpg'
+test_image_path = './images/numberTest2.jpg'
 test_image_original = image.load_img(test_image_path)
 pyplot.imshow(test_image_original)
 pyplot.show()
